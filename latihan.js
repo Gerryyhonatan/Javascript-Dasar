@@ -20,6 +20,19 @@ var tambahPenumpang = function(namaPenumpang, penumpang) {
  }
 }
 
-function hapusPenumpang() {
-
+var hapusPenumpang = function(namaPenumpang, penumpang) {
+    if(penumpang.length == 0) {
+        console.log('Angkot kosong dan tidak ada penumpang')
+        return penumpang
+    } else {
+        for (let i = 0; i < penumpang.length; i++) {
+            if (penumpang[i] == namaPenumpang) {
+                penumpang[1] = undefined
+                return penumpang
+            } else if(i == penumpang.length -1){
+                console.log(namaPenumpang + ' tidak ada didalam angkot')
+                return penumpang
+            }
+        }
+    }
 }
